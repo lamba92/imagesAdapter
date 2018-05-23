@@ -1,14 +1,10 @@
 package it.lamba.imagesadapter
 
 import android.content.Context
-import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.Point
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.widget.RecyclerView
-import android.util.TypedValue
-import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -18,7 +14,7 @@ import it.lamba.utilslibrary.inflate
 import kotlinx.android.synthetic.main.image_layout.view.*
 import java.io.File
 
-class ImagesAdapter(val context: Context, private val allowDelete: Boolean = true): RecyclerView.Adapter<ImagesAdapter.ImageVH>()  {
+class ImagesAdapter(private val context: Context, private val allowDelete: Boolean = true): RecyclerView.Adapter<ImagesAdapter.ImageVH>()  {
 
     private val images = ArrayList<FileContainer>()
 
