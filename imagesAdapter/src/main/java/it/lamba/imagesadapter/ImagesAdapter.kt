@@ -14,6 +14,11 @@ import it.lamba.utilslibrary.inflate
 import kotlinx.android.synthetic.main.image_layout.view.*
 import java.io.File
 
+/**
+ * Allow to display images as a slideshow inside a [RecyclerView].
+ * @param allowDelete set to <code>true</code> to allow deletion of an image.
+ * @param context current Android context
+ */
 class ImagesAdapter(private val context: Context, private val allowDelete: Boolean = true): RecyclerView.Adapter<ImagesAdapter.ImageVH>()  {
 
     private val images = ArrayList<FileContainer>()
@@ -41,22 +46,36 @@ class ImagesAdapter(private val context: Context, private val allowDelete: Boole
             } else remove_image.hide()
         })
 
-
     override fun getItemCount() = images.size
 
     override fun onBindViewHolder(holder:ImageVH, position: Int) = holder.bind(images[position], position, context)
 
+    /**
+     * Adds an image in the end of the adapter.
+     * @param file the image file you need to display
+     * @param isImageNew set to <code>true</code> to blur the image instead of deleting it.
+     */
     fun add(file: File, isImageNew: Boolean = true){
         images.add(FileContainer(file, isImageNew))
         notifyItemInserted(images.size)
     }
 
+    /**
+     * Adds all images in the end of the adapter.
+     * @param files the list of image files you need to display
+     * @param isImageNew set to <code>true</code> to blur the images instead of deleting them.
+     */
     fun addAll(files: List<File>, isImageNew: Boolean = true){
         files.forEach {
             add(it, isImageNew)
         }
     }
 
+    /**
+     * Returns the images in the adapter based on the type you asked. Blurred new images won't be returned.
+     * @param type the image types you need to get. See [ImagesType]s
+     * @return The list of files, may be empty.
+     */
     fun getImages(type: ImagesType = ImagesType.NewImages): ArrayList<File> {
         val toReturn = ArrayList<File>()
         when(type){
@@ -74,12 +93,18 @@ class ImagesAdapter(private val context: Context, private val allowDelete: Boole
         return toReturn
     }
 
+    /**
+     * Types of images available
+     */
     abstract class ImagesType {
 
         object NewImages: ImagesType()
         object OldImages: ImagesType()
     }
 
+    /**
+     * Commodity container for an image file
+     */
     class FileContainer(var imageFile: File, var isImageNew: Boolean, var willBeDelete: Boolean = false)
 
     class ImageVH(private val v: View): RecyclerView.ViewHolder(v){
