@@ -13,6 +13,25 @@ This is with `allowDelete = false`
 
 ![alt text](https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/2.gif)
 
+### Installing
+
+Add the [JitPack.io](http://jitpack.io) repository to the project `build.grade`:
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Then import the latest version in the `build.gradle` of the modules you need:
+
+```
+dependencies {
+    implementation 'com.github.Lamba92:imagesAdapter:{latest_version}'
+}
+```
+
 ## Getting Started
 
 Create a new `ImagesAdapter` and assign it to a `RecyclerView`:
@@ -34,25 +53,6 @@ To retrieve the images inside the adapter use `getImages(type: ImagesType)`
 imagesAdapter.getImages(ImagesAdapter.ImagesType.NewImages) //by default type = ImagesType.NewImages
 imagesAdapter.getImages(ImagesAdapter.ImagesType.OldImages).apply{
     //do something with the images List
-}
-```
-
-### Installing
-
-Add the [JitPack.io](http://jitpack.io) repository to the project `build.grade`:
-```
-allprojects {
-    repositories {
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
-
-Then import the latest version in the `build.gradle` of the modules you need:
-
-```
-dependencies {
-    implementation 'com.github.Lamba92:imagesAdapter:{latest_version}'
 }
 ```
 
