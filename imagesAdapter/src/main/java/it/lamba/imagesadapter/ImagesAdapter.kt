@@ -9,7 +9,7 @@ import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import it.lamba.utilslibrary.Utils.scaleSizes
+import it.lamba.utilslibrary.Utils.scaleSizesFixingWidth
 import it.lamba.utilslibrary.inflate
 import kotlinx.android.synthetic.main.image_layout.view.*
 import java.io.File
@@ -110,7 +110,7 @@ class ImagesAdapter(private val context: Context, private val allowDelete: Boole
     class ImageVH(private val v: View): RecyclerView.ViewHolder(v){
         fun bind(fileContainer: FileContainer, position: Int, context: Context){
             v.remove_image.tag = position
-            scaleSizes(fileContainer.imageFile,200f, context.resources).apply {
+            scaleSizesFixingWidth(fileContainer.imageFile,200f, context.resources).apply {
                 val lp = v.image_content.layoutParams
                 lp.width = this.x
                 lp.height = this.y
