@@ -5,16 +5,13 @@
 A `RecyclerView.Adapter` that allows to add, remove, blur and slideshow images inside a `RecyclerView`.
 
 This is how it works with `allowDelete = false`
-<video controls="controls" poster="https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/1.jpg" width="360" height="640">
-    <!-- .mp4 file for native playback in IE9+, Firefox, Chrome, Safari and most mobile browsers -->
-    <source src="https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/1.mp4" type="video/mp4" />
-</video>
 
-This is with `allowDelete = true`
-<video controls="controls" poster="https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/2.jpg" width="360" height="640">
-    <!-- .mp4 file for native playback in IE9+, Firefox, Chrome, Safari and most mobile browsers -->
-    <source src="https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/2.mp4" type="video/mp4" />
-</video>
+
+![alt text](https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/1.gif)
+
+This is with `allowDelete = false`
+
+![alt text](https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/2.gif)
 
 ## Getting Started
 
