@@ -46,7 +46,7 @@ imagesAdapter.add(file)  //single file, by default isImageNew = true
 imagesAdapter.add(files, false) //a List of files
 ```
 
-Keep in mind that `isImageNew` flag changes the behaviour of the delete fab. If set to true, tapping the fab will remove the image from the adapter completely. If set to `false` tapping the fab will blur the image and the image won't be present when using `getImages()`
+Keep in mind that `isImageNew` flag changes the behaviour of the delete fab. If set to true, tapping the fab will remove the image from the adapter completely. If set to `false` tapping the fab will blur the image and the image won't be present in the list returned by `getImages()`
 
 To retrieve the images inside the adapter use `getImages(type: ImagesType)`
 ```
