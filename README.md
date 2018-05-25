@@ -9,7 +9,7 @@ This is how it works with `allowDelete = false`
 
 ![alt text](https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/1.gif)
 
-This is with `allowDelete = false`
+This is with `allowDelete = true`
 
 ![alt text](https://raw.githubusercontent.com/lamba92/imagesAdapter/master/stuff/2.gif)
 
