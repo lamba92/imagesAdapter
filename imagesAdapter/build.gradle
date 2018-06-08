@@ -37,6 +37,10 @@ task javadoc(type: Javadoc) {
 
 task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaAndroidTask) {
     outputFormat = 'html'
+    linkMapping{
+        dir = javadoc.destinationDir.path
+        url = 'lamba92.github.io/api/images-adapter'
+    }
     outputDirectory = javadoc.destinationDir.path
 }
 

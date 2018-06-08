@@ -56,6 +56,8 @@ imagesAdapter.getImages(ImagesAdapter.ImagesType.OldImages).apply{
 }
 ```
 
-## Authors
+Check the [KDocs](https://lamba92.github.io/api/images-adapter/).
+
+## Author
 
 * **Lamberto Basti**  - [lamba92](https://github.com/lamba92)
