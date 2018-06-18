@@ -20,6 +20,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '28.0.0'
 }
 
 // build a jar with source files
@@ -44,7 +45,7 @@ task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaAndroidTask) {
     outputDirectory = javadoc.destinationDir.path
 }
 
-// build a jar with javadoc
+// build` a jar with javadoc
 task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
@@ -56,8 +57,8 @@ artifacts {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
