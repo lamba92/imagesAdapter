@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/Lamba92/imagesAdapter.svg)](https://jitpack.io/#Lamba92/imagesAdapter)
+[![Build Status](https://travis-ci.org/lamba92/imagesAdapter.svg?branch=master)](https://travis-ci.org/lamba92/imagesAdapter) [![](https://jitpack.io/v/Lamba92/imagesAdapter.svg)](https://jitpack.io/#Lamba92/imagesAdapter) 
 
 # ImagesAdapter
 
